@@ -1,6 +1,7 @@
 platform :ios , '10.0' 
+use_modular_headers!
 
-target 'TestApp' do 
+target 'TestApp' do
 
     pod 'SnapKit'
     pod 'LookinServer', :subspecs => ['Swift']
