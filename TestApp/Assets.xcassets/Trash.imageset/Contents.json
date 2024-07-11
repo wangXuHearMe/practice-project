@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "搜索分类.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Trash-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Trash.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B05523F2C3EA5F60070F2EA /* MixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */; };
+		2B055D222C40050B0070F2EA /* HandWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B055D212C40050B0070F2EA /* HandWritingViewController.swift */; };
 		2B05FD4A2C3BFB5B0070F2EA /* CollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B05FD492C3BFB5B0070F2EA /* CollectionViewManager.swift */; };
 		2B34477D2B5136B50044E314 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34477C2B5136B50044E314 /* MainTabBarController.swift */; };
 		2B34477F2B5138230044E314 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34477E2B5138230044E314 /* HomeViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixViewModel.swift; sourceTree = "<group>"; };
+		2B055D212C40050B0070F2EA /* HandWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWritingViewController.swift; sourceTree = "<group>"; };
 		2B05FD492C3BFB5B0070F2EA /* CollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewManager.swift; sourceTree = "<group>"; };
 		2B34477C2B5136B50044E314 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2B34477E2B5138230044E314 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -63,12 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B055D202C4004EC0070F2EA /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B3447812B51387A0044E314 /* MixViewController.swift */,
+				2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */,
+				2B055D212C40050B0070F2EA /* HandWritingViewController.swift */,
+			);
+			path = SubViewControllers;
+			sourceTree = "<group>";
+		};
 		2B3447802B51385E0044E314 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				2B34477E2B5138230044E314 /* HomeViewController.swift */,
-				2B3447812B51387A0044E314 /* MixViewController.swift */,
-				2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -116,6 +126,7 @@
 		2BED35DA2B207D400067ADA8 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				2B055D202C4004EC0070F2EA /* SubViewControllers */,
 				2BED35DB2B207D400067ADA8 /* AppDelegate.swift */,
 				2BED35DD2B207D400067ADA8 /* SceneDelegate.swift */,
 				2BED35DF2B207D400067ADA8 /* ViewController.swift */,
@@ -255,6 +266,7 @@
 				2BED35DC2B207D400067ADA8 /* AppDelegate.swift in Sources */,
 				2BE576FF2B54DF2000798697 /* BaseViewController.swift in Sources */,
 				2B05FD4A2C3BFB5B0070F2EA /* CollectionViewManager.swift in Sources */,
+				2B055D222C40050B0070F2EA /* HandWritingViewController.swift in Sources */,
 				2B05523F2C3EA5F60070F2EA /* MixViewModel.swift in Sources */,
 				2B34477D2B5136B50044E314 /* MainTabBarController.swift in Sources */,
 				2BBF24942B57FF97005F8BEE /* Models.swift in Sources */,

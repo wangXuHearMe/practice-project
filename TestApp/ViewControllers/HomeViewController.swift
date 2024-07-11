@@ -74,6 +74,16 @@ final class HomeViewController: BaseViewController {
         }
         dataSource.append(dataSource1)
         
+        let dataSource2 = HomeCellDataSource()
+        dataSource2.title = "手写板尝试"
+        dataSource2.selectedBlock = { [weak self] in
+            guard let self else { return }
+            let vc = HandWritingViewController()
+            vc.title = "手写板尝试"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        dataSource.append(dataSource2)
+        
         tableView.reloadData()
     }
   
