@@ -23,7 +23,7 @@ final class AdvertiseViewController: UIViewController {
   }
   
   private func timeCutdown() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
       guard let self else { return }
       self.switchRootController()
     }

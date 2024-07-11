@@ -9,25 +9,27 @@ import Foundation
 import UIKit
 
 public class BaseViewController: UIViewController {
-  public let tabBarType: MainTabBarItem
-  init(tabBarType: MainTabBarItem) {
-    self.tabBarType = tabBarType
-    super.init(nibName: nil, bundle: nil)
-  }
+    public let tabBarType: MainTabBarItem
+    
+    init(tabBarType: MainTabBarItem) {
+        self.tabBarType = tabBarType
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
   
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavigationBar()
+        setupUI()
+    }
   
-  override public func viewDidLoad() {
-    super.viewDidLoad()
-    setupNavigationBar()
-    setupUI()
-  }
+    public func setupNavigationBar() {
+        title = tabBarType.desciption
+    }
   
-  public func setupNavigationBar() {
-    title = tabBarType.desciption
-  }
-  
-  public func setupUI() {}
+    public func setupUI() {}
 }
