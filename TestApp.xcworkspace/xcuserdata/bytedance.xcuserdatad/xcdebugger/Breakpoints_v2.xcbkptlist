@@ -14,21 +14,6 @@
             symbolName = "setupUI"
             moduleName = "">
             <Locations>
-               <Location
-                  uuid = "A5694A12-79A0-4BA6-A758-9AC84ED0F13E - 9113cc4917bb9fbd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestApp.ViewController.setupUI() -&gt; ()"
-                  moduleName = "TestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Desktop/TestApp/TestApp/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "364">
-               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

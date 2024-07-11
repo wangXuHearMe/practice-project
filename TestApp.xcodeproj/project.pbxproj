@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B05523F2C3EA5F60070F2EA /* MixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */; };
+		2B05FD4A2C3BFB5B0070F2EA /* CollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B05FD492C3BFB5B0070F2EA /* CollectionViewManager.swift */; };
 		2B34477D2B5136B50044E314 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34477C2B5136B50044E314 /* MainTabBarController.swift */; };
 		2B34477F2B5138230044E314 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34477E2B5138230044E314 /* HomeViewController.swift */; };
-		2B3447822B51387A0044E314 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3447812B51387A0044E314 /* MineViewController.swift */; };
-		2B3447842B5138B90044E314 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3447832B5138B90044E314 /* CategoryViewController.swift */; };
-		2B3447862B5138CC0044E314 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3447852B5138CC0044E314 /* CartViewController.swift */; };
-		2B3447882B5138E40044E314 /* FoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3447872B5138E40044E314 /* FoundViewController.swift */; };
+		2B3447822B51387A0044E314 /* MixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3447812B51387A0044E314 /* MixViewController.swift */; };
+		2BBF24922B57E8E6005F8BEE /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF24912B57E8E6005F8BEE /* Cells.swift */; };
+		2BBF24942B57FF97005F8BEE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF24932B57FF97005F8BEE /* Models.swift */; };
 		2BE576FF2B54DF2000798697 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE576FE2B54DF2000798697 /* BaseViewController.swift */; };
 		2BE577022B54EEE900798697 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE577012B54EEE900798697 /* BaseNavigationController.swift */; };
 		2BE577052B552BCC00798697 /* AdvertiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE577042B552BCC00798697 /* AdvertiseViewController.swift */; };
@@ -26,12 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixViewModel.swift; sourceTree = "<group>"; };
+		2B05FD492C3BFB5B0070F2EA /* CollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewManager.swift; sourceTree = "<group>"; };
 		2B34477C2B5136B50044E314 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2B34477E2B5138230044E314 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2B3447812B51387A0044E314 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
-		2B3447832B5138B90044E314 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		2B3447852B5138CC0044E314 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		2B3447872B5138E40044E314 /* FoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewController.swift; sourceTree = "<group>"; };
+		2B3447812B51387A0044E314 /* MixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixViewController.swift; sourceTree = "<group>"; };
+		2BBF24912B57E8E6005F8BEE /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		2BBF24932B57FF97005F8BEE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		2BE576FE2B54DF2000798697 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2BE577012B54EEE900798697 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2BE577042B552BCC00798697 /* AdvertiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiseViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				2B34477E2B5138230044E314 /* HomeViewController.swift */,
-				2B3447812B51387A0044E314 /* MineViewController.swift */,
-				2B3447832B5138B90044E314 /* CategoryViewController.swift */,
-				2B3447852B5138CC0044E314 /* CartViewController.swift */,
-				2B3447872B5138E40044E314 /* FoundViewController.swift */,
+				2B3447812B51387A0044E314 /* MixViewController.swift */,
+				2B05523E2C3EA5F60070F2EA /* MixViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,6 +88,9 @@
 			children = (
 				2BE577042B552BCC00798697 /* AdvertiseViewController.swift */,
 				2BE579A22B55520E00798697 /* UIView + Touch.swift */,
+				2BBF24912B57E8E6005F8BEE /* Cells.swift */,
+				2BBF24932B57FF97005F8BEE /* Models.swift */,
+				2B05FD492C3BFB5B0070F2EA /* CollectionViewManager.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -248,16 +251,17 @@
 				2B34477F2B5138230044E314 /* HomeViewController.swift in Sources */,
 				2BED35E02B207D400067ADA8 /* ViewController.swift in Sources */,
 				2BE577052B552BCC00798697 /* AdvertiseViewController.swift in Sources */,
-				2B3447842B5138B90044E314 /* CategoryViewController.swift in Sources */,
+				2BBF24922B57E8E6005F8BEE /* Cells.swift in Sources */,
 				2BED35DC2B207D400067ADA8 /* AppDelegate.swift in Sources */,
-				2B3447862B5138CC0044E314 /* CartViewController.swift in Sources */,
 				2BE576FF2B54DF2000798697 /* BaseViewController.swift in Sources */,
+				2B05FD4A2C3BFB5B0070F2EA /* CollectionViewManager.swift in Sources */,
+				2B05523F2C3EA5F60070F2EA /* MixViewModel.swift in Sources */,
 				2B34477D2B5136B50044E314 /* MainTabBarController.swift in Sources */,
+				2BBF24942B57FF97005F8BEE /* Models.swift in Sources */,
 				2BE577022B54EEE900798697 /* BaseNavigationController.swift in Sources */,
 				2BED35DE2B207D400067ADA8 /* SceneDelegate.swift in Sources */,
-				2B3447822B51387A0044E314 /* MineViewController.swift in Sources */,
+				2B3447822B51387A0044E314 /* MixViewController.swift in Sources */,
 				2BE579A32B55520E00798697 /* UIView + Touch.swift in Sources */,
-				2B3447882B5138E40044E314 /* FoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +410,8 @@
 				DEVELOPMENT_TEAM = C5B3R48JLM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestApp/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports-games";
+				INFOPLIST_KEY_CFBundleDisplayName = "我有希冀";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -443,7 +448,8 @@
 				DEVELOPMENT_TEAM = C5B3R48JLM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestApp/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports-games";
+				INFOPLIST_KEY_CFBundleDisplayName = "我有希冀";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
