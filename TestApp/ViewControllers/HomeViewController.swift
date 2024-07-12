@@ -10,6 +10,8 @@ import UIKit
 import IGListKit
 import SnapKit
 
+/// 无论结局如何 我都 100% 投入
+
 fileprivate class HomeCellDataSource {
     var title: String = ""
     var selectedBlock: (() -> Void)?
@@ -35,7 +37,8 @@ fileprivate class HomeCell: UITableViewCell {
     
     private func setupUI() {
         selectionStyle = .none
-
+        backgroundColor = .clear
+        
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.centerY.height.equalToSuperview()
@@ -59,6 +62,7 @@ final class HomeViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeCell.self, forCellReuseIdentifier: NSStringFromClass(HomeCell.self))
+        tableView.backgroundColor = .clear
         hidesBottomBarWhenPushed = true
         setupDataSource()
     }

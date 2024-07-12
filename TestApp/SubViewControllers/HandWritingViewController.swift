@@ -8,7 +8,6 @@
 import Foundation
 
 final class HandWritingViewController: UIViewController {
-    
     private var handWritingView: HandWritingView = .init()
     private var draftHandWritingView: HandWritingView = .init(recognizionTime: nil, lineColor: UIColor.white.cgColor, isDraft: true)
     
@@ -42,16 +41,6 @@ final class HandWritingViewController: UIViewController {
         }
     }
     
-    @objc func changeState() {
-        self.handWritingView.cleanHandWritingView()
-        self.handWritingView.isHidden = currIsDraftState
-        
-        self.draftHandWritingView.cleanHandWritingView()
-        self.draftHandWritingView.isHidden = !currIsDraftState
-        
-        self.currIsDraftState.toggle()
-    }
-    
     private func setupUI() {
         view.addSubview(handWritingView)
         view.addSubview(draftHandWritingView)
@@ -77,8 +66,9 @@ final class HandWritingViewController: UIViewController {
 }
 
 extension HandWritingViewController: HandWritingRecognizeDelegate {
-    func recognize() {
+    func recognize(resultImage: UIImage) {
         handWritingView.cleanHandWritingView()
+        /// use resultImage and start ocr
     }
     
     func closeDraftHandWritingView() {
@@ -90,7 +80,7 @@ extension HandWritingViewController: HandWritingRecognizeDelegate {
 }
 
 protocol HandWritingRecognizeDelegate: AnyObject {
-    func recognize()
+    func recognize(resultImage: UIImage)
     func closeDraftHandWritingView()
 }
 
@@ -144,7 +134,7 @@ class HandWritingView: UIView {
         
         panelView.deleteClosure = { [weak self] in
             guard let self else { return }
-            self.cleanHandWritingView()
+            self.cleanHandWriting4DraftTrash()
         }
         
         panelView.dropClosure = { [weak self] in
@@ -222,6 +212,17 @@ class HandWritingView: UIView {
         setNeedsDisplay()
     }
     
+    /// 草稿全部清空后一键恢复
+    /// 目前的做法连续点两次清空之后就恢复不了了
+    private var cleanAllFromDraft: Bool = false
+    private func cleanHandWriting4DraftTrash() {
+        cleanAllFromDraft = true
+        dropLines.removeAll()
+        dropLines = currLines
+        currLines.removeAll()
+        setNeedsDisplay()
+    }
+    
     private func dropLastLine() {
         guard !currLines.isEmpty else { return }
         let line = currLines.removeLast()
@@ -231,8 +232,13 @@ class HandWritingView: UIView {
     
     private func returnDropLastLine() {
         guard !dropLines.isEmpty else { return }
-        let line = dropLines.removeLast()
-        currLines.append(line)
+        if !cleanAllFromDraft {
+            let line = dropLines.removeLast()
+            currLines.append(line)
+        } else {
+            cleanAllFromDraft = false
+            currLines.append(contentsOf: dropLines)
+        }
         setNeedsDisplay()
     }
     
@@ -243,7 +249,14 @@ class HandWritingView: UIView {
     }
     
     @objc private func recognizeHandWriting() {
-        delegate?.recognize()
+        delegate?.recognize(resultImage: toImage())
+    }
+    
+    private func toImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
     }
 }
 
